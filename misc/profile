@@ -1,0 +1,51 @@
+#测试用配置文件
+
+[log]
+out_error_level = 4
+#错误日志最大输入等级
+
+log_addr = misc/log
+#日志创建地址
+
+[proc]
+work_process_num = 1
+#工作子进程数目
+
+start_on_daemons = 1
+#是否以守护进程的方式打开 [1 / 0]
+
+work_connections = 100
+#epoll最大连接数量
+
+thread_num = 1
+#线程池中线程数
+
+[netSecurity]
+flood_check_start = 1
+#是否开启泛洪检测
+
+flood_interval = 100
+#泛洪检测所允许的最小时间间隔
+#单位ms
+
+flood_packages = 10
+#泛洪检测所允许的时间段内
+#接收到的数据包数量最大值
+
+[socket]
+
+max_send =1000
+#总发送队列最大滞留量
+
+max_request_send = 300
+#单个连接发送队列最大滞留量
+
+range_of_min = 20000
+range_of_max = 65535
+#开放端口范围
+
+programming_control_port = 21118
+#程序控制端口
+
+message_forward_port = 21876
+#消息转发端口
